@@ -6,28 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
     <title>Document</title>
 </head>
-
-<%factionURL = encodeURI(faction)%>
 
 <body>
     <h1>Warfinder</h1>
     <nav>
         <div class="dropdown">
-            <a href="#" class = "btn">Faction</a>
+            <a href="#" class="btn">Faction</a>
             <div class="dropdown-content">
                 <%faction.forEach (faction => {%>
-                    <%factionURL = encodeURI(faction)%>
+                <%factionURL = encodeURI(faction)%>
                 <a href="/<%=factionURL%>"><%=faction%></a>
                 <%})%>
             </div>
         </div>
-            <div class="dropdown">
-            <a href="#" class = "btn">Ability</a>
+        <div class="dropdown">
+            <a href="#" class="btn">Ability</a>
             <div class="dropdown-content">
                 <%ability.forEach (ability => {%>
                 <a href="#"><%=ability.name%></a>
@@ -35,11 +33,11 @@
             </div>
         </div>
     </nav>
-    <%card.forEach(card => {%>
+    <%factions.forEach(factions => {%>
     <div class="cardIndex">
 
-        <img src="<%=card.img%>" alt="<%=card.name%>"> <br />
-        <%=card.name%>
+        <img src="<%=factions.img%>" alt="<%=factions.name%>"> <br />
+        <%=factions.name%>
         <hr>
     </div>
     <%})%>

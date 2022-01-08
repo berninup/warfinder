@@ -14,14 +14,14 @@ indexRouter.get('/seed', (req, res) => {
 
 indexRouter.get('/abilityseed', (req, res) => {
     Ability.create(abilitySeed, (error, data) => {
-       res.redirect('/') 
+        res.redirect('/')
     })
 })
 
 
 indexRouter.get('/', (req, res) => {
     Card.find({}, (error, allCard) => {
-        Card.find().distinct('faction', (error, allFaction) =>{
+        Card.find().distinct('faction', (error, allFaction) => {
             Ability.find({}, (error, allAbility) => {
                 res.render('index.ejs', {
                     card: allCard,
@@ -29,11 +29,32 @@ indexRouter.get('/', (req, res) => {
                     ability: allAbility
                 })
             })
-            
+
         })
-        
+
     })
 })
+
+
+indexRouter.get('/:factionId', (req, res) => {
+    Card.find({faction: `${req.params.factionId}`}, (error, factions) => {
+        Card.find({}, (error, allCard) => {
+            Card.find().distinct('faction', (error, allFaction) => {
+                Ability.find({}, (error, allAbility) => {
+                    res.render('faction.ejs', {
+                        factions: factions,
+                        card: allCard,
+                        faction: allFaction,
+                        ability: allAbility
+                    })
+                })
+
+            })
+
+        })
+    })
+})
+
 
 
 module.exports = indexRouter
