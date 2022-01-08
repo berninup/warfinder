@@ -13,9 +13,13 @@ indexRouter.get('/seed', (req, res) => {
 
 indexRouter.get('/', (req, res) => {
     Card.find({}, (error, allCard) => {
-        res.render('index.ejs', {
-            card: allCard
+        Card.find().distinct('faction', (error, allFaction) =>{
+            res.render('index.ejs', {
+                card: allCard,
+                faction: allFaction
+            })
         })
+        
     })
 })
 

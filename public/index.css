@@ -1,3 +1,8 @@
+body {
+    color: #752306;
+    font-family: 'Metal Mania', cursive;
+}
+
 .cardIndex {
     display: flex;
     margin: auto;
@@ -5,10 +10,76 @@
     display: block;
     justify-content: center;
     text-align: center;
+
+
+
+}
+
+nav {
+    overflow: hidden;
+    background-color: #02040f;
+    margin-bottom: 10px;
+}
+
+nav a {
+    float: left;
+    color: #e5dada;
+    font-size: 24px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+
+
+}
+
+
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E5DADA;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.69);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.69);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: #02040f;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+}
+
+.dropdown .btn {
+    float:initial;
+    padding: 10px 16px;
+    display: block;
+       
+}
+
+.dropdown .btn:hover {
+    background-color: #752306;
+}
+
+.dropdown-content a:hover {
+    background-color: #752306;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
     
 
-    
 }
+
 
 img {
     border-radius: 10%;
