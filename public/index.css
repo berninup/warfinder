@@ -62,7 +62,7 @@ nav a {
 .dropdown .btn {
     float:initial;
     padding: 10px 16px;
-    display: block;
+    display: inline;
        
 }
 
@@ -87,3 +87,4 @@ img {
     width: 220px;
     object-fit: none;
 }
+

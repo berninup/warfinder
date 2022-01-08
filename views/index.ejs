@@ -23,6 +23,14 @@
                 <%})%>
             </div>
         </div>
+            <div class="dropdown">
+            <a href="#" class = "btn">Ability</a>
+            <div class="dropdown-content">
+                <%ability.forEach (ability => {%>
+                <a href="#"><%=ability.name%></a>
+                <%})%>
+            </div>
+        </div>
     </nav>
     <%card.forEach(card => {%>
     <div class="cardIndex">

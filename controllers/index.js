@@ -2,6 +2,8 @@ const express = require('express');
 const indexRouter = express.Router()
 const Card = require('../models/card.js')
 const cardSeed = require('../models/cardSeed')
+const Ability = require('../models/ability')
+const abilitySeed = require('../models/abilitySeed')
 
 
 indexRouter.get('/seed', (req, res) => {
@@ -10,14 +12,24 @@ indexRouter.get('/seed', (req, res) => {
     })
 })
 
+indexRouter.get('/abilityseed', (req, res) => {
+    Ability.create(abilitySeed, (error, data) => {
+       res.redirect('/') 
+    })
+})
+
 
 indexRouter.get('/', (req, res) => {
     Card.find({}, (error, allCard) => {
         Card.find().distinct('faction', (error, allFaction) =>{
-            res.render('index.ejs', {
-                card: allCard,
-                faction: allFaction
+            Ability.find({}, (error, allAbility) => {
+                res.render('index.ejs', {
+                    card: allCard,
+                    faction: allFaction,
+                    ability: allAbility
+                })
             })
+            
         })
         
     })
