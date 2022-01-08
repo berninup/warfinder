@@ -3,7 +3,8 @@ const app = express();
 const mongoose = require('mongoose')
 require('dotenv').config();
 const methodOverride = require('method-override');
-const indexRouter = require('./controllers/index');
+const indexRouter = require('./controllers/indexRouter');
+const factionRouter = require('./controllers/factionRouter')
 const morgan = require('morgan')
 
 
@@ -13,6 +14,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'))
 
 app.use(indexRouter)
+app.use(factionRouter)
 
 mongoose.connect(process.env.DATABASE_URL)
 

@@ -13,33 +13,20 @@
 </head>
 
 <body>
-    <h1>Warfinder</h1>
-    <nav>
-        <div class="dropdown">
-            <a href="#" class="btn">Faction</a>
-            <div class="dropdown-content">
-                <%faction.forEach (faction => {%>
-                <%factionURL = encodeURI(faction)%>
-                <a href="/<%=factionURL%>"><%=faction%></a>
-                <%})%>
-            </div>
-        </div>
-        <div class="dropdown">
-            <a href="#" class="btn">Ability</a>
-            <div class="dropdown-content">
-                <%ability.forEach (ability => {%>
-                <a href="#"><%=ability.name%></a>
-                <%})%>
-            </div>
-        </div>
-    </nav>
+    
+
+    <%- include('./partials/nav') %>
+
     <%factions.forEach(factions => {%>
+
     <div class="cardIndex">
 
         <img src="<%=factions.img%>" alt="<%=factions.name%>"> <br />
         <%=factions.name%>
         <hr>
+
     </div>
+
     <%})%>
 
 </body>

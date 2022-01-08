@@ -36,24 +36,7 @@ indexRouter.get('/', (req, res) => {
 })
 
 
-indexRouter.get('/:factionId', (req, res) => {
-    Card.find({faction: `${req.params.factionId}`}, (error, factions) => {
-        Card.find({}, (error, allCard) => {
-            Card.find().distinct('faction', (error, allFaction) => {
-                Ability.find({}, (error, allAbility) => {
-                    res.render('faction.ejs', {
-                        factions: factions,
-                        card: allCard,
-                        faction: allFaction,
-                        ability: allAbility
-                    })
-                })
 
-            })
-
-        })
-    })
-})
 
 
 

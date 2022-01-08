@@ -15,26 +15,11 @@
 <%factionURL = encodeURI(faction)%>
 
 <body>
-    <h1>Warfinder</h1>
-    <nav>
-        <div class="dropdown">
-            <a href="#" class = "btn">Faction</a>
-            <div class="dropdown-content">
-                <%faction.forEach (faction => {%>
-                    <%factionURL = encodeURI(faction)%>
-                <a href="/<%=factionURL%>"><%=faction%></a>
-                <%})%>
-            </div>
-        </div>
-            <div class="dropdown">
-            <a href="#" class = "btn">Ability</a>
-            <div class="dropdown-content">
-                <%ability.forEach (ability => {%>
-                <a href="#"><%=ability.name%></a>
-                <%})%>
-            </div>
-        </div>
-    </nav>
+    
+
+    <%- include('./partials/nav') %>
+
+
     <%card.forEach(card => {%>
     <div class="cardIndex">
 

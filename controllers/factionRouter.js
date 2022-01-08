@@ -1,0 +1,25 @@
+const express = require('express');
+const factionRouter = express.Router()
+const Card = require('../models/card.js')
+const Ability = require('../models/ability')
+
+factionRouter.get('/:factionId', (req, res) => {
+    Card.find({faction: `${req.params.factionId}`}, (error, factions) => {
+        Card.find({}, (error, allCard) => {
+            Card.find().distinct('faction', (error, allFaction) => {
+                Ability.find({}, (error, allAbility) => {
+                    res.render('faction.ejs', {
+                        factions: factions,
+                        card: allCard,
+                        faction: allFaction,
+                        ability: allAbility
+                    })
+                })
+
+            })
+
+        })
+    })
+})
+
+module.exports = factionRouter

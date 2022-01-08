@@ -1,6 +1,11 @@
 body {
-    color: #752306;
+    
     font-family: 'Metal Mania', cursive;
+}
+
+a {
+    text-decoration: none;
+    color: #752306;
 }
 
 .cardIndex {
