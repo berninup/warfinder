@@ -12,22 +12,22 @@
     <title>Document</title>
 </head>
 
-<%factionURL = encodeURI(faction)%>
-
 <body>
 
 
     <%- include('./partials/nav') %>
 
+    <%abil.forEach(abil => {%>
 
-    <%card.forEach(card => {%>
     <div class="cardIndex">
 
-        <img src="<%=card.img%>" alt="<%=card.name%>"> <br />
-        <%=card.name%>
-        <%=card.ability%>
+        <img src="<%=abil.img%>" alt="<%=abil.name%>"> <br />
+        <%=abil.name%>
+
         <hr>
+
     </div>
+
     <%})%>
 
 </body>

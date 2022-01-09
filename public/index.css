@@ -1,5 +1,4 @@
 body {
-    
     font-family: 'Metal Mania', cursive;
 }
 
@@ -15,9 +14,6 @@ a {
     display: block;
     justify-content: center;
     text-align: center;
-
-
-
 }
 
 nav {
@@ -33,9 +29,6 @@ nav a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-
-
-
 }
 
 
@@ -65,10 +58,9 @@ nav a {
 }
 
 .dropdown .btn {
-    float:initial;
+    float: initial;
     padding: 10px 16px;
     display: inline;
-       
 }
 
 .dropdown .btn:hover {
@@ -81,8 +73,6 @@ nav a {
 
 .dropdown:hover .dropdown-content {
     display: block;
-    
-
 }
 
 
@@ -92,4 +82,3 @@ img {
     width: 220px;
     object-fit: none;
 }
-
