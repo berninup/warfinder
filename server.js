@@ -7,6 +7,7 @@ const indexRouter = require('./controllers/indexRouter');
 const factionRouter = require('./controllers/factionRouter')
 const abilityRouter = require('./controllers/abilityRouter')
 const newRouter = require('./controllers/newRouter')
+const newAbilityRouter = require('./controllers/newAbilityRouter')
 const morgan = require('morgan')
 
 
@@ -19,6 +20,7 @@ app.use(indexRouter)
 app.use(factionRouter)
 app.use(abilityRouter)
 app.use(newRouter)
+app.use(newAbilityRouter)
 
 mongoose.connect(process.env.DATABASE_URL)
 

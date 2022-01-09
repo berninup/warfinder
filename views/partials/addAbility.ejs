@@ -1,0 +1,13 @@
+<script>
+    $('button').on('click', function () {
+        $('body').append(` 
+        Ability:
+<select name="ability" id="" form='cardForm'>
+<option value=""></option>
+<%ability.forEach(ability => {%>
+    <option value='<%=ability.name%>'><%=ability.name%></option>
+<%});%>
+</select>
+    `)
+    })
+</script>

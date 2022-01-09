@@ -4,9 +4,10 @@ const Card = require('../models/card.js')
 const Ability = require('../models/ability');
 
 
-newRouter.get('/new', (req, res) => {
+
+newRouter.get('/new/card', (req, res) => {
     Ability.find({}, (error, allAbilities) => {
-        res.render('new.ejs', {
+        res.render('newCard.ejs', {
             ability: allAbilities
         })
     })
@@ -18,5 +19,8 @@ newRouter.post('/', (req, res) => {
         res.redirect('/')
     })
 })
+
+
+
 
 module.exports = newRouter

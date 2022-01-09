@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    
     <title>Document</title>
 </head>
 
@@ -81,25 +82,15 @@
     </select>
     <button>Add</button>
 
-    <script>
-        $('button').on('click', function () {
-            $('body').append(
-                ` Ability:
-    <select name="ability" id="" form='cardForm'>
-        <option value=""></option>
-        <%ability.forEach(ability => {%>
-            <option value='<%=ability.name%>'><%=ability.name%></option>
-        <%});%>
-    </select>
     
-            `)
-        })
+    <script>
+
         
-             
     </script>
 
 
-    
+
+    <%- include('./partials/addAbility') %>
 </body>
 
 </html>
