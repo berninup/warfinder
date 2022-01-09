@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    <form action="/" method="post" id='cardForm'>
+        <input type="text" name="name" id="" placeholder="Name" /><br />
+        <input type="text" name="faction" id="" placeholder="Faction" /><br />
+        <input type="text" name="img" id="" placeholder="Image" /><br />
+        <input type="submit" value="Create">
+
+    </form>
+    Attack:
+    <select name="attack" id="attack" form='cardForm'>
+        <option value=""></option>
+        <option value="d4">d4</option>
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option>
+    </select>
+
+    Defense
+    <select name="defense" id="" form='cardForm'>
+        <option value=""></option>
+        <option value="d4">d4</option>
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option>
+    </select>
+
+    Magic Attack:
+    <select name="mAttack" id="" form='cardForm'>
+        <option value=""></option>
+        <option value="d4">d4</option>
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option>
+    </select>
+
+    Magic Defense:
+    <select name="mDefense" id="" form='cardForm'>
+        <option value=""></option>
+        <option value="d4">d4</option>
+        <option value="d6">d6</option>
+        <option value="d8">d8</option>
+        <option value="d10">d10</option>
+        <option value="d12">d12</option>
+    </select>
+
+    Rank:
+    <select name="rank" id="" form='cardForm'>
+        <option value=""></option>
+        <option value="Rank 1">Rank 1</option>
+        <option value="Rank 2">Rank 2</option>
+        <option value="Rank 3">Rank 3</option>
+    </select>
+
+    Ability:
+    <select name="ability" id="" form='cardForm'>
+        <option value=""></option>
+        <%ability.forEach(ability => {%>
+        <option value='<%=ability.name%>'><%=ability.name%></option>
+        <%});%>
+    </select>
+    <button>Add</button>
+
+    <script>
+        $('button').on('click', function () {
+            $('body').append(
+                ` Ability:
+    <select name="ability" id="" form='cardForm'>
+        <option value=""></option>
+        <%ability.forEach(ability => {%>
+            <option value='<%=ability.name%>'><%=ability.name%></option>
+        <%});%>
+    </select>
+    
+            `)
+        })
+        
+             
+    </script>
+
+
+    
+</body>
+
+</html>

@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const indexRouter = require('./controllers/indexRouter');
 const factionRouter = require('./controllers/factionRouter')
 const abilityRouter = require('./controllers/abilityRouter')
+const newRouter = require('./controllers/newRouter')
 const morgan = require('morgan')
 
 
@@ -17,6 +18,7 @@ app.use(express.static('public'))
 app.use(indexRouter)
 app.use(factionRouter)
 app.use(abilityRouter)
+app.use(newRouter)
 
 mongoose.connect(process.env.DATABASE_URL)
 
