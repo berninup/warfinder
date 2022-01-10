@@ -15,22 +15,40 @@
 <body>
     <%- include('./partials/nav') %>
     <div class="grid">
-
-        <%=cards.name%>
-        <%=cards.faction%>
-        <%=cards.attack%>
-        <%=cards.defense%>
-        <%=cards.mAttack%>
-        <%=cards.mDefense%>
-        <%for(i=0; i<cards.ability.length;i++){%>
-            <%=cards.ability%>
-        <%}%>
         
-        <%=cards.flavor%>
-        <%=cards.rank%>
-
-        <img class="card" src="<%=cards.img%>" alt="">
-        <img class='frame' src="../images/leavesTransparent.png" alt="">
+        <div class="div1">
+            <h3><%=cards.name%></h3>
+            <%=cards.faction%>
+        </div>
+        <div class="div2">
+            <ul>
+            <%for(i=0; i<cards.ability.length;i++){%>
+                <li>
+                <%=cards.ability[i]%>
+                </li>
+            <%}%>
+            </ul>
+        </div>
+        <div class="div3">
+            <%=cards.flavor%>
+            <%=cards.rank%>
+        </div>
+        <div class="div4">
+            <img src="../images/<%=cards.attack%>.png">
+            
+            <img src="../images/<%=cards.mAttack%>.png">
+        </div>
+        <div class="div5">
+            <img src="../images/<%=cards.defense%>.png">
+            <img src="../images/<%=cards.mDefense%>.png">
+            
+            
+        </div>       
+              
+            <img class="card" src="<%=cards.img%>" alt="">
+            <img class='frame' src="../images/leavesTransparent.png" alt="">
+        
+        
     
     
     </div>
