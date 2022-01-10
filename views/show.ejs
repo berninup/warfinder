@@ -12,24 +12,28 @@
     <title>Document</title>
 </head>
 
-<%factionURL = encodeURI(faction)%>
-
 <body>
-
-
     <%- include('./partials/nav') %>
+    <div class="grid">
 
-
-    <%card.forEach(card => {%>
-    <div class="cardIndex">
-
-        <img src="<%=card.img%>" alt="<%=card.name%>"> <br />
-        <a href="/card/<%=card._id%>"><%=card.name%></a>
+        <%=cards.name%>
+        <%=cards.faction%>
+        <%=cards.attack%>
+        <%=cards.defense%>
+        <%=cards.mAttack%>
+        <%=cards.mDefense%>
+        <%for(i=0; i<cards.ability.length;i++){%>
+            <%=cards.ability%>
+        <%}%>
         
-        <hr>
-    </div>
-    <%})%>
+        <%=cards.flavor%>
+        <%=cards.rank%>
 
+        <img class="card" src="<%=cards.img%>" alt="">
+        <img class='frame' src="../images/leavesTransparent.png" alt="">
+    
+    
+    </div>
 </body>
 
 </html>

@@ -1,5 +1,12 @@
 body {
     font-family: 'Metal Mania', cursive;
+    /* background-color: #4D6A6D; */
+    /* background-color: #607B7D; */
+    background-color: #5C6B73;
+}
+
+.title {
+    font-size: 30px;
 }
 
 a {
@@ -76,9 +83,35 @@ nav a {
 }
 
 
-img {
+.cardIndex img {
     border-radius: 10%;
     height: 375px;
     width: 220px;
     object-fit: none;
 }
+
+img.card{
+    position: absolute;
+    height: 500px;
+    width: auto;
+    left: 30%;
+    top: 37.5%
+}
+
+img.frame {
+    position: absolute;
+    left: 30%;
+
+   
+}
+
+/* .parent {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+    .div1 { grid-area: 4 / 3 / 6 / 4; }
+    .div2 { grid-area: 2 / 2 / 7 / 5; } */
