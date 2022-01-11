@@ -10,6 +10,18 @@ body {
     font-size: 30px;
 }
 
+.newContainer {
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.newContainer select, button {
+    width: 5%;
+}
+
 a {
     text-decoration: none;
     color: #752306;
