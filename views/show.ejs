@@ -14,44 +14,47 @@
 
 <body>
     <%- include('./partials/nav') %>
-    <div class="grid">
-        
-        <div class="div1">
-            <h3><%=cards.name%></h3>
-            <%=cards.faction%>
-        </div>
-        <div class="div2">
-            <ul>
+<div class="container">
+    <div class="showContainer">
+        <img class="cardImg" src=<%=cards.img%> alt="">
+        <div class="abilityContainer">
             <%for(i=0; i<cards.ability.length;i++){%>
                 <li>
                 <%=cards.ability[i]%>
                 </li>
             <%}%>
-            </ul>
+
         </div>
-        <div class="div3">
-            <%=cards.flavor%>
-            <%=cards.rank%>
+
+        <div class="attackContainer">
+            <img class='diceImage' src="../images/<%=cards.attack%>.svg" alt="">
         </div>
-        <div class="div4">
-            <img src="../images/<%=cards.attack%>.png">
-            
-            <img src="../images/<%=cards.mAttack%>.png">
+
+        <div class="defenseContainer">
+            <img class='diceImage' src="../images/<%=cards.defense%>.svg" alt="">
         </div>
-        <div class="div5">
-            <img src="../images/<%=cards.defense%>.png">
-            <img src="../images/<%=cards.mDefense%>.png">
+
+        <div class="mAttackContainer">
+            <img class='diceImage' src="../images/<%=cards.mAttack%>.svg" alt="">
+        </div>
+
+        <div class="mDefenseContainer">
+            <img class='diceImage' src="../images/<%=cards.mDefense%>.svg" alt="">
+        </div>
+
+        <div class="nameContainer">
+            <h3><%=cards.name%></h3>
+            <p><%=cards.faction%></p>
+        </div>
+
+        <div class="rankContainer">
+            <p><%=cards.rank%></p>
             
-            
-        </div>       
-              
-            <img class="card" src="<%=cards.img%>" alt="">
-            <img class='frame' src="../images/leavesTransparent.png" alt="">
-        
-        
-    
-    
+        </div>
+
     </div>
+</div>
+
 </body>
 
 </html>

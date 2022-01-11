@@ -17,7 +17,8 @@ a {
 .cardIndex {
     display: flex;
     margin: auto;
-    width: 50%;
+    width: 30%;
+    height: 200 px;
     display: block;
     justify-content: center;
     text-align: center;
@@ -85,120 +86,163 @@ nav a {
 
 .cardIndex img {
     border-radius: 10%;
-    height: 375px;
-    width: 220px;
-    object-fit: none;
+    height: auto;
+    width: 400px;
+    
 }
 
- /* img.card{
-    
-    height: 500px;
-    width: 337.08px;
- }
+.container {
+    display: flex;
+    justify-content: center;
+}
 
-img.frame {
-    height: 500px;
-    width: auto;
 
-   337.08
-}  */
-
-/* img.frame {
-    margin: auto;
-} */
-
-/* .grid {
+.showContainer {
     display: grid;
-    grid-template-columns: 1fr repeat(3, 2fr) 1fr;
-    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: repeat(4, 1fr) 2fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    }
+    height: 75%;
+    width: 30%;
+    z-index: 2;
+    position: absolute;
+  }
+  
+  .cardImg {
+    height: 100%;
+    width: 100%;
+    border-style: solid;
+    border-width: 30px;
+    border-color: gray;
+    position: inherit;
+  }
+  
+  .abilityContainer { 
+    grid-area: 5 / 2 / 6 / 3;
+    background-color: gray; 
+    opacity: 0.75;
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 40px;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .attackContainer {
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: gray; 
+    opacity: 0.75;
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .defenseContainer {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: gray; 
+    opacity: 0.75;
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mAttackContainer {
+    grid-area: 2 / 3 / 3 / 4;
+    background-color: gray; 
+    opacity: 0.75;
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    border-radius: 50%;
+   -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    margin-left: 40px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mDefenseContainer {
+    grid-area: 4 / 3 / 5 / 4;
+    background-color: gray;
+    opacity: 0.75; 
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 30px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .nameContainer {
+    grid-area: 1 / 2 / 2 / 3;
+    background-color: gray;
+    opacity: 0.75; 
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 35px;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .rankContainer {
+    grid-area: 6 / 2 / 7 / 3;
+    background-color: gray; 
+    opacity: 0.75;
+    z-index: 1;
+    height: 75%;
+    width: 100%;
+    margin-left: 30px;
+    margin-top: 35px;
+    border-radius: 5%;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0,0,0,0.13); 
+    box-shadow: 0px 10px 13px -7px #000000,       21px 27px 16px 12px rgba(0,0,0,0.13);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .diceImage {
+   
+    height: 75%;
+    width: 75%;
     
-  .frame, .card { grid-area: 1 / 3 / 3 / 4; }
-    .frame, .card { grid-area: 2 / 2 / 7 / 5; } */
-
-
-    .grid {
-        display: grid;
-        grid-template-columns: 2fr repeat(3, 1fr) 2fr;
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        color: white;
-        
-        }
-        
-        .div1 { grid-area: 1 / 3 / 2 / 4; }
-         /* { grid-area: 3 / 3 / 4 / 4; } */
-         .div2, .div3 { grid-area: 4 / 3 / 5 / 4; }
-        .div4, .div5 { grid-area: 2 / 2 / 3 / 5; }
-         /* { grid-area: 3 / 2 / 4 / 5; } */
-        .card, .frame { 
-            grid-area: 1 / 2 / 5 / 5; 
-            width: 100%;
-            height: 100%;
-        }
-
-        .div1 {
-            margin: 0 auto;
-        }
-
-        .div2 {
-            display: flex;
-            justify-content: center;
-        }
-      .div3 {
-          display: flex;
-          flex-direction: column;
-          justify-content: end;
-          align-items: center;
-          
-
-      }
-
-        /* .frame, .card {
-            position: relative;
-        } */
-        /* .div1 {
-            
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            flex-direction: column;
-        } */
-
-        .div1, .div2, .div3, .div4, .div5 {
-            z-index: 1;
-            
-        }
-
-        .div4 {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .div4 img {
-            height: 25%;
-            /* margin: -10px 30px 0px 30px; */
-            margin: -3% 5% 0 5%;
-        }
-
-        .div5 {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            
-        }
-
-        .div5 img {
-            height: 25%;
-            margin: 0 5% 5% 5%
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
+    
+  }
