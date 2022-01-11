@@ -6,17 +6,17 @@ const Ability = require('../models/ability')
 const abilitySeed = require('../models/abilitySeed')
 
 
-indexRouter.get('/seed', (req, res) => {
-    Card.create(cardSeed, (error, data) => {
-        res.redirect('/')
-    })
-})
+// indexRouter.get('/seed', (req, res) => {
+//     Card.create(cardSeed, (error, data) => {
+//         res.redirect('/')
+//     })
+// })
 
-indexRouter.get('/abilityseed', (req, res) => {
-    Ability.create(abilitySeed, (error, data) => {
-        res.redirect('/')
-    })
-})
+// indexRouter.get('/abilityseed', (req, res) => {
+//     Ability.create(abilitySeed, (error, data) => {
+//         res.redirect('/')
+//     })
+// })
 
 
 // indexRouter.get('/', (req, res) => {

@@ -1,33 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="/index.css">
     <title>Document</title>
 </head>
-
-
-
 <body>
+    <%- include('./partials/nav') %>
 
-    <form action="/" method="post" id='cardForm'>
-        <input type="text" name="name" id="" placeholder="Name" /><br />
-        <input type="text" name="faction" id="" placeholder="Faction" /><br />
-        <input type="text" name="img" id="" placeholder="Image" /><br />
+    <form action="/card/<%=editCard._id%>?_method=PUT" method="post" id='cardForm'>
+        <input type="text" name="name" id="" placeholder="Name" value="<%=editCard.name%>"/><br />
+        <input type="text" name="faction" id="" placeholder="Faction" value="<%=editCard.faction%>"/><br />
+        <input type="text" name="img" id="" placeholder="Image" value="<%=editCard.img%>"/><br />
         <input type="submit" value="Create">
 
     </form>
     Attack:
     <select name="attack" id="attack" form='cardForm'>
-        <option value=""></option>
+        <option value="<%=editCard.attack%>"><%=editCard.attack%></option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
         <option value="d8">d8</option>
@@ -37,7 +34,7 @@
 
     Defense
     <select name="defense" id="" form='cardForm'>
-        <option value=""></option>
+        <option value="<%=editCard.defense%>"><%=editCard.defense%></option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
         <option value="d8">d8</option>
@@ -47,7 +44,7 @@
 
     Magic Attack:
     <select name="mAttack" id="" form='cardForm'>
-        <option value=""></option>
+        <option value="<%=editCard.mAttack%>"><%=editCard.mAttack%></option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
         <option value="d8">d8</option>
@@ -57,7 +54,7 @@
 
     Magic Defense:
     <select name="mDefense" id="" form='cardForm'>
-        <option value=""></option>
+        <option value="<%=editCard.mDefense%>"><%=editCard.mDefense%></option>
         <option value="d4">d4</option>
         <option value="d6">d6</option>
         <option value="d8">d8</option>
@@ -67,27 +64,34 @@
 
     Rank:
     <select name="rank" id="" form='cardForm'>
-        <option value=""></option>
+        <option value="<%=editCard.rank%>"><%=editCard.rank%></option>
         <option value="Rank 1">Rank 1</option>
         <option value="Rank 2">Rank 2</option>
         <option value="Rank 3">Rank 3</option>
     </select>
 
     Ability:
-    <select name="ability" id="" form='cardForm'>
-        <option value=""></option>
-        <%ability.forEach(ability => {%>
-        <option value='<%=ability.name%>'><%=ability.name%></option>
-        <%});%>
-    </select>
-    <button>Add</button>
-
     
-   
+       
+        <%editCard.ability.forEach(editAbility => {%>
+            <select name ='ability' id='' form='cardForm'>
+            <option value="<%=editAbility%>"><%=editAbility%></option>
+            <%ability.forEach(ability => {%>
+                <option value='<%=ability.name%>'><%=ability.name%></option>
+                <%});%>
+        </select>
+        <%})%>
 
 
 
+
+
+        
+    </select>
+    
+    <button>Add</button>
     <%- include('./partials/addAbility') %>
-</body>
 
+
+</body>
 </html>

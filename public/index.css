@@ -23,6 +23,13 @@ a {
     display: block;
     justify-content: center;
     text-align: center;
+    
+}
+
+.cardIndex img{
+    box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
+-webkit-box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
+-moz-box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
 }
 
 nav {
