@@ -9,52 +9,52 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <title><%=cards.name%></title>
 </head>
 
 <body>
     <%- include('./partials/nav') %>
-<div class="container">
-    <div class="showContainer">
-        <img class="cardImg" src=<%=cards.img%> alt="">
-        <div class="abilityContainer">
-            <%for(i=0; i<cards.ability.length;i++){%>
+    <div class="container">
+        <div class="showContainer">
+            <img class="cardImg" src=<%=cards.img%> alt="">
+            <div class="abilityContainer">
+                <%for(i=0; i<cards.ability.length;i++){%>
                 <li>
-                <%=cards.ability[i]%>
+                    <%=cards.ability[i]%>
                 </li>
-            <%}%>
+                <%}%>
 
         </div>
 
         <div class="attackContainer">
             <img class='diceImage' src="../images/<%=cards.attack%>.svg" alt="">
+            </div>
+
+            <div class="defenseContainer">
+                <img class='diceImage' src="../images/<%=cards.defense%>.svg" alt="">
+            </div>
+
+            <div class="mAttackContainer">
+                <img class='diceImage' src="../images/<%=cards.mAttack%>.svg" alt="">
+            </div>
+
+            <div class="mDefenseContainer">
+                <img class='diceImage' src="../images/<%=cards.mDefense%>.svg" alt="">
+            </div>
+
+            <div class="nameContainer">
+
+                <p><%=cards.name%></p>
+                <p class='faction'><%=cards.faction%></p>
+            </div>
+
+            <div class="rankContainer">
+                <p><%=cards.rank%></p>
+
+            </div>
+
         </div>
-
-        <div class="defenseContainer">
-            <img class='diceImage' src="../images/<%=cards.defense%>.svg" alt="">
-        </div>
-
-        <div class="mAttackContainer">
-            <img class='diceImage' src="../images/<%=cards.mAttack%>.svg" alt="">
-        </div>
-
-        <div class="mDefenseContainer">
-            <img class='diceImage' src="../images/<%=cards.mDefense%>.svg" alt="">
-        </div>
-
-        <div class="nameContainer">
-           
-            <p><%=cards.name%></p>
-            <p class= 'faction'><%=cards.faction%></p>
-        </div>
-
-        <div class="rankContainer">
-            <p><%=cards.rank%></p>
-
-        </div>
-
     </div>
-</div>
 
 </body>
 

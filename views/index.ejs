@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <title>Warfinder</title>
 </head>
 
 <%factionURL = encodeURI(faction)%>
@@ -23,9 +23,9 @@
     <%card.forEach(card => {%>
     <div class="cardIndex">
 
-        <img src="<%=card.img%>" alt="<%=card.name%>"> <br />
+        <a href="/card/<%=card._id%>"><img src="<%=card.img%>" alt="<%=card.name%>"></a> <br />
         <a href="/card/<%=card._id%>"><%=card.name%></a>
-        
+
         <hr>
     </div>
     <%})%>

@@ -4,6 +4,7 @@ body {
     /* background-color: #607B7D; */
     background-color: #5C6B73;
     list-style: none;
+    font-size: 20px;
 }
 
 .title {
@@ -16,15 +17,21 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
 }
-.newContainer select, button {
+
+.newContainer select,
+button {
     width: 5%;
 }
 
 a {
     text-decoration: none;
     color: #752306;
+}
+
+.cardIndex a:hover {
+    color: #AF5434;
 }
 
 .cardIndex {
@@ -35,13 +42,24 @@ a {
     display: block;
     justify-content: center;
     text-align: center;
-    
+
+
 }
 
-.cardIndex img{
-    box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
--webkit-box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
--moz-box-shadow: 31px 14px 81px -4px rgba(0,0,0,0.62);
+.cardIndex:hover {
+    transform: scale(1.25);
+    background-color: #02040f;
+    border-radius: 10%;
+    padding-top: 10px;
+    -webkit-text-stroke: 2px #e5dada;
+}
+
+
+.cardIndex img:hover {
+    box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
+    -webkit-box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
+    -moz-box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
+
 }
 
 nav {
@@ -147,7 +165,7 @@ nav a {
     z-index: 1;
     height: 75%;
     width: 100%;
-   
+
     border-radius: 5%;
     -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
     box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
@@ -232,12 +250,12 @@ nav a {
     flex-direction: column;
     justify-content: center;
     margin-top: 5px;
-    
-    
-   
-    
-    
-    
+
+
+
+
+
+
 }
 
 .faction {

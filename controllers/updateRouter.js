@@ -18,7 +18,12 @@ updateRouter.put('/card/:id', (req, res) => {
 updateRouter.get('/card/:id/edit', (req, res) => {
     Card.findById(req.params.id, (error, foundCard) => {
         Card.find().distinct('faction', (error, allFaction) => {
-            Ability.find().collation({locale: 'en', strength: 2}).sort({name:1}).then( (allAbility) => {
+            Ability.find().collation({
+                locale: 'en',
+                strength: 2
+            }).sort({
+                name: 1
+            }).then((allAbility) => {
                 res.render('edit.ejs', {
                     editCard: foundCard,
                     faction: allFaction,
@@ -27,7 +32,7 @@ updateRouter.get('/card/:id/edit', (req, res) => {
                 })
             })
         })
-        
+
     })
 })
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +11,16 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"
         integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/index.css">
-    <title>Document</title>
+    <title>Edit <%=editCard.name%></title>
 </head>
+
 <body>
     <%- include('./partials/nav') %>
 
     <form action="/card/<%=editCard._id%>?_method=PUT" method="post" id='cardForm'>
-        <input type="text" name="name" id="" placeholder="Name" value="<%=editCard.name%>"/><br />
-        <input type="text" name="faction" id="" placeholder="Faction" value="<%=editCard.faction%>"/><br />
-        <input type="text" name="img" id="" placeholder="Image" value="<%=editCard.img%>"/><br />
+        <input type="text" name="name" id="" placeholder="Name" value="<%=editCard.name%>" /><br />
+        <input type="text" name="faction" id="" placeholder="Faction" value="<%=editCard.faction%>" /><br />
+        <input type="text" name="img" id="" placeholder="Image" value="<%=editCard.img%>" /><br />
         <input type="submit" value="Create">
 
     </form>
@@ -41,7 +43,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option>
     </select>
-<br />
+    <br />
     Magic Attack:
     <select name="mAttack" id="" form='cardForm'>
         <option value="<%=editCard.mAttack%>"><%=editCard.mAttack%></option>
@@ -61,7 +63,7 @@
         <option value="d10">d10</option>
         <option value="d12">d12</option>
     </select>
-<br />
+    <br />
     Rank:
     <select name="rank" id="" form='cardForm'>
         <option value="<%=editCard.rank%>"><%=editCard.rank%></option>
@@ -71,27 +73,24 @@
     </select>
 
     Ability:
-    
-       
-        <%editCard.ability.forEach(editAbility => {%>
-            <select name ='ability' id='' form='cardForm'>
-            <option value="<%=editAbility%>"><%=editAbility%></option>
-            <%ability.forEach(ability => {%>
-                <option value='<%=ability.name%>'><%=ability.name%></option>
-                <%});%>
-        </select>
-        <%})%>
 
 
-
-
-
-        
+    <%editCard.ability.forEach(editAbility => {%>
+    <select name='ability' id='' form='cardForm'>
+        <option value="<%=editAbility%>"><%=editAbility%></option>
+        <%ability.forEach(ability => {%>
+        <option value='<%=ability.name%>'><%=ability.name%></option>
+        <%});%>
     </select>
-    
+    <%})%>
+
+
+    </select>
+
     <button>Add</button>
     <%- include('./partials/addAbility') %>
 
 
 </body>
+
 </html>
