@@ -1,14 +1,13 @@
 body {
-    font-family: 'Metal Mania', cursive;
-    /* background-color: #4D6A6D; */
-    /* background-color: #607B7D; */
-    background-color: #5C6B73;
+    font-family: "Metal Mania",cursive;
+    background-color: #5c6b73;
     list-style: none;
-    font-size: 20px;
+    font-size: 20px
 }
 
 .title {
     font-size: 30px;
+    -webkit-text-stroke: 1px #02040f
 }
 
 .newContainer {
@@ -16,22 +15,16 @@ body {
     margin: 5px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-
+    align-items: center
 }
 
-.newContainer select,
-button {
-    width: 5%;
+.newContainer select,button {
+    width: 5%
 }
 
-a {
+a,nav a {
     text-decoration: none;
-    color: #752306;
-}
-
-.cardIndex a:hover {
-    color: #AF5434;
+    color: #752306
 }
 
 .cardIndex {
@@ -41,31 +34,32 @@ a {
     height: 200 px;
     display: block;
     justify-content: center;
-    text-align: center;
-
-
+    text-align: center
 }
 
-.cardIndex:hover {
-    transform: scale(1.25);
-    background-color: #02040f;
+.cardIndex:hover a {
     border-radius: 10%;
     padding-top: 10px;
-    -webkit-text-stroke: 2px #e5dada;
+    font-size: 32px;
+    -webkit-text-stroke: 1px #000
 }
 
-
 .cardIndex img:hover {
-    box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
-    -webkit-box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
-    -moz-box-shadow: 31px 14px 81px -4px rgba(0, 0, 0, 0.62);
+    box-shadow: 31px 14px 81px -4px rgba(0,0,0,.62);
+    -webkit-box-shadow: 31px 14px 81px -4px rgba(0,0,0,.62);
+    -moz-box-shadow: 31px 14px 81px -4px rgba(0,0,0,.62);
+    border-style: solid;
+    border-color: #02040f;
+    transform: scale(1.05)
+}
 
+.dropdown,nav {
+    overflow: hidden
 }
 
 nav {
-    overflow: hidden;
     background-color: #02040f;
-    margin-bottom: 10px;
+    margin-bottom: 10px
 }
 
 nav a {
@@ -73,26 +67,20 @@ nav a {
     color: #e5dada;
     font-size: 24px;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    padding: 14px 16px
 }
-
-
 
 .dropdown {
-    float: left;
-    overflow: hidden;
+    float: left
 }
-
-
 
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #E5DADA;
-    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.69);
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.69);
-    z-index: 1;
+    background-color: #e5dada;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,.69);
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,.69);
+    z-index: 1
 }
 
 .dropdown-content a {
@@ -100,46 +88,40 @@ nav a {
     color: #02040f;
     padding: 12px 16px;
     display: block;
-    text-align: left;
+    text-align: left
 }
 
 .dropdown .btn {
     float: initial;
     padding: 10px 16px;
-    display: inline;
+    display: inline
 }
 
-.dropdown .btn:hover {
-    background-color: #752306;
-}
-
-.dropdown-content a:hover {
-    background-color: #752306;
+.dropdown .btn:hover,.dropdown-content a:hover {
+    background-color: #752306
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block
 }
-
 
 .cardIndex img {
     border-radius: 10%;
     height: auto;
-    width: 400px;
+    width: 400px
 }
 
 .container {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
-
 
 .showContainer {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: repeat(4, 1fr) 2fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+    grid-template-rows: repeat(4,1fr) 2fr 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
     height: 75%;
     width: 25%;
     z-index: 2;
@@ -149,136 +131,81 @@ nav a {
     max-height: 600px;
     border-style: solid;
     border-width: 30px;
-    border-color: gray;
+    border-color: gray
 }
 
 .cardImg {
     height: 100%;
     width: 100%;
-    position: inherit;
+    position: inherit
+}
+
+.abilityContainer,.attackContainer,.defenseContainer,.mAttackContainer,.mDefenseContainer,.nameContainer {
+    background-color: gray;
+    opacity: .75;
+    z-index: 1;
+    width: 100%;
+    -webkit-box-shadow: 0 10px 13px -7px #000,21px 27px 16px 12px rgba(0,0,0,.13);
+    box-shadow: 0 10px 13px -7px #000,21px 27px 16px 12px rgba(0,0,0,.13);
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .abilityContainer {
-    grid-area: 5 / 2 / 6 / 3;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
+    grid-area: 5/2/6/3;
     height: 75%;
-    width: 100%;
-
     border-radius: 5%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: column
 }
 
-.attackContainer {
-    grid-area: 2 / 1 / 3 / 2;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
+.attackContainer,.defenseContainer,.mAttackContainer,.mDefenseContainer,.nameContainer {
+    grid-area: 2/1/3/2;
     height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border-radius: 50%
 }
 
-.defenseContainer {
-    grid-area: 4 / 1 / 5 / 2;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.defenseContainer,.mAttackContainer,.mDefenseContainer,.nameContainer {
+    grid-area: 4/1/5/2
 }
 
-.mAttackContainer {
-    grid-area: 2 / 3 / 3 / 4;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.mAttackContainer,.mDefenseContainer,.nameContainer {
+    grid-area: 2/3/3/4
 }
 
-.mDefenseContainer {
-    grid-area: 4 / 3 / 5 / 4;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
-    border-radius: 50%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.mDefenseContainer,.nameContainer {
+    grid-area: 4/3/5/4
 }
 
 .nameContainer {
-    grid-area: 1 / 2 / 2 / 3;
-    background-color: gray;
-    opacity: 0.75;
-    z-index: 1;
+    grid-area: 1/2/2/3;
     height: 50%;
-    width: 100%;
     border-radius: 5%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    margin-top: 5px;
-
-
-
-
-
-
+    margin-top: 5px
 }
 
 .faction {
     top: 10%;
-    margin-top: -7px;
+    margin-top: -7px
 }
 
 .rankContainer {
-    grid-area: 6 / 2 / 7 / 3;
+    grid-area: 6/2/7/3;
     background-color: gray;
-    opacity: 0.75;
+    opacity: .75;
     z-index: 1;
     height: 75%;
     width: 100%;
     border-radius: 5%;
-    -webkit-box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
-    box-shadow: 0px 10px 13px -7px #000000, 21px 27px 16px 12px rgba(0, 0, 0, 0.13);
+    -webkit-box-shadow: 0 10px 13px -7px #000,21px 27px 16px 12px rgba(0,0,0,.13);
+    box-shadow: 0 10px 13px -7px #000,21px 27px 16px 12px rgba(0,0,0,.13);
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center
 }
 
 .diceImage {
     height: 75%;
-    width: 75%;
+    width: 75%
 }
