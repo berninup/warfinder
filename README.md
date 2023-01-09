@@ -44,7 +44,7 @@ Follow along with my progress [here](https://trello.com/b/SwsKaAfe/project-2).
 * Create page tracks card creation value
 
 ## <a name="deployment"></a>Deployed Link
-* [Heroku](https://warfinder.herokuapp.com/)
+
 
 
 
